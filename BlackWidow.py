@@ -8,8 +8,15 @@ from time import sleep
 
 # Weather Function to determine the weather
 def weather():
-    weatherForcastList = ["snowing", "blizzard", "icy", "rainy", "windy", "sunny"]
+    weatherForcastList = ["snowing", "blizzarding", "icy", "rainy", "windy", "sunny"]
     weatherCondition = random.choice(weatherForcastList)
     return weatherCondition
 
-print(weather())
+weatherAlert = weather()
+
+def vehicleResponseSystem():
+    if weatherAlert == "snowing":
+        print ("\nThe National Weather Service has updated our alarm by 30 minutes because "
+        " it is ", weatherAlert, "right now.")
+
+vehicleResponseSystem()
