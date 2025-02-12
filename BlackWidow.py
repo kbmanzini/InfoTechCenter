@@ -11,8 +11,8 @@ CYAN = "\033[96m"
 RESET = "\033[0m"  # Reset color
 
 # Display welcome message with developer name
-print(GREEN + "Welcome Branch - Developer: KB Manzini" + RESET)
-print(YELLOW + "\nWelcome to InfoTechCenter v1.0" + RESET)
+print(RED + "Welcome Branch - Developer: KB Manzini" + RESET)
+print(MAGENTA + "\nWelcome to InfoTechCenter v1.0" + RESET)
 
 # Initialize variables for the boot animation
 x = 0  # Counter for loop iterations
@@ -21,7 +21,7 @@ ellipsis = 0  # Counter for the number of dots in the boot message
 # Boot-up animation loop
 while x != 20:  # Loop runs 20 times to simulate loading
     x += 1  # Increment loop counter
-    message = (CYAN + "Infotech Center System Booting" + "." * ellipsis + RESET)  # Create boot message with dots
+    message = (RED + "Infotech Center System Booting" + "." * ellipsis + RESET)  # Create boot message with dots
     ellipsis += 1  # Increase dot count
     
     # Overwrite the same line with the updated message
@@ -74,7 +74,7 @@ def vehicle_response_system():
     if weather_data["alarm_time"]:
         print(
             f"\nThe National Weather Service has updated our alarm by {weather_data['alarm_time']} minutes because it is {weather_alert} right now.")
-        print(f"VRS has been engaged only allowing you to drive {weather_data['speed_limit']} MPH")
+        print(f"\nVRS has been engaged only allowing you to drive {weather_data['speed_limit']} MPH")
     else:
         print(f"\nThe weather is {weather_alert} outside. Drive safe!")
         print("VRS has been disengaged. Drive safely!")
